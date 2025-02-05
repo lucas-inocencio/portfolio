@@ -1,37 +1,33 @@
-const elemTexto = document.querySelector(".sobre");
+const elemText = document.querySelector(".about");
 const elemBotaoLight = document.querySelector(".botao-light");
 const elemBotaoDark = document.querySelector(".botao-dark");
-const elemInformacoes = document.querySelector(".informacoes");
-const elemBotaoInformacoes = document.querySelector(".botao-informacoes");
+const elemInformations = document.querySelector(".informations");
+const elemBottonInformations = document.querySelector(".botton-informations");
 
 function alterarClasse() {
   console.log("Você clicou no texto Sobre mim");
-  // alert("Você clicou no texto Sobre mim");
+  alert("Você clicou no texto Sobre mim");
 
-  elemTexto.classList.toggle("amarelo");
-  elemTexto.classList.toggle("vermelho");
+  elemText.classList.toggle("red");
+  elemText.classList.toggle("yellow");
 
-  elemTexto.textContent = "Sobre mim (clicado)";
+  elemText.textContent = "Sobre mim (clicado)";
 }
 
 // Eventos
-elemTexto.addEventListener("click", function () {
-  alterarClasse();
-});
-
-// alterarClasse();
+elemText.addEventListener("click", alterarClasse);
 
 // Adicionar o evento de clique no botão do rodapé
-elemBotaoInformacoes.addEventListener("click", function () {
+elemInformations.addEventListener("click", function () {
   console.log("Clicou no botão de informações");
-  elemInformacoes.classList.toggle("visivel");
+  elemInformations.classList.toggle("visivel");
 
-  console.log(elemInformacoes.classList.contains("visivel"));
+  console.log(elemInformations.classList.contains("visivel"));
 
-  if (elemInformacoes.classList.contains("visivel")) {
-    elemBotaoInformacoes.textContent = "Ocultar informações";
+  if (elemInformations.classList.contains("visivel")) {
+    elemInformations.textContent = "Ocultar informações";
   } else {
-    elemBotaoInformacoes.textContent = "Exibir informações";
+    elemInformations.textContent = "Exibir informações";
   }
 });
 
