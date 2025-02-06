@@ -60,24 +60,26 @@
     font-size: 26px;
   }
   
-  .skills {
-    display: flex;
-  }
-  
-  .skill {
+  .skills,.project {
     display: flex;
     flex-direction: column;
   }
   
   .projects {
     display: flex;
-  }
-  
-  .project {
-    display: flex;
-    flex-direction: column;
+    gap: 20px;
   }
 
-  .informations {
-    display: none;
+
+  .light {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .light header {
+    background-color: #eee;
+  }
+
+  .light a {
+    color: black;
   }
