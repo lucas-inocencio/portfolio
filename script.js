@@ -27,7 +27,7 @@ const imgPaths = [
 ];
 
 imgPaths.forEach((imgPath) => {
-  const imgName = imgPath.replaceAll("-", " ");
+  const imgName = imgPath.replaceAll("-", " ").replace(/\b\w/g, char => char.toUpperCase());
   const project = document.createElement("div");
   project.classList.add("project");
   const isPortuguese = document.body.classList.contains("portuguese");
